@@ -2,7 +2,18 @@
 #define __CHASSIS_H
 
 #include "bsp_can.h"
+#include "djimotor.h"
 
-void Chassis_Init();
+
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+void Chassis_Init(CAN_HandleTypeDef *hcan);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

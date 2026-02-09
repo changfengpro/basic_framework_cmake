@@ -89,6 +89,19 @@ register_component(
 3. 创建 `CMakeLists.txt` 并调用 `register_component`。
 4. 由于目录嵌套，确保父目录 `Component/bsp/CMakeLists.txt` 中包含 `add_subdirectory(bsp_spi)`或者采用**下文 6. 注意事项** 中的多级目录自动化方式。
 
+* `register_component`通用模板:
+```
+register_component(
+    SRCS 
+        "xxx.c"
+    INCLUDE_DIRS 
+        "."                 # "."代表当前文件夹包含头文件
+    REQUIRES 
+        "stm32cubemx" # 依赖 HAL 库定义
+        
+)
+```
+
 ### 5.2 常用编译命令
 
 ```bash
@@ -125,7 +138,55 @@ cmake --build --preset Release
 
 ---
 
-## 6. 开发注意事项
+## 6. C/C++ 混合编程规范
+
+由于底层 HAL 库是纯 C 编写，混合编程需遵循以下原则：
+
+* **Extern "C" 保护**：所有被 `.cpp` 引用的 C 头文件必须包含 `extern "C"` 块。
+```c
+#ifdef __cplusplus
+extern "C" {
+#endif
+/* 声明 */
+#ifdef __cplusplus
+}
+#endif
+
+```
+
+* 例如`bsp_can.h`
+```bsp_can.h
+#ifndef __BSP_CAN_H
+#define __BSP_CAN_H
+
+/* C++ USER CODE BEGIN  */
+
+/* C++ USER CODE END   */
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include "stm32f4xx_hal_can.h"
+#include "can.h"
+
+void can_user_init(CAN_HandleTypeDef *hcan);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
+
+```
+
+* **中断回调**：若在 `.cpp` 中编写中断回调函数（如 `HAL_CAN_RxFifo0MsgPendingCallback`），必须放在 `extern "C"` 块内，防止名称粉碎导致链接失败。
+* **静态构造**：框架已处理 `__libc_init_array`，支持全局对象的构造函数调用。
+* **内存管理**：嵌入式环境建议优先使用静态分配，谨慎使用 `new/delete`。
+
+---
+
+## 7. 开发注意事项
 
 * **依赖声明**：本框架采用静态库链接模式。在代码中 `#include` 某个头文件后，**必须**在该组件的 `CMakeLists.txt` 中的 `REQUIRES` 下显式声明，只有声明了 `REQUIRES`，CMake 才会将目标组件的 `INCLUDE_DIRS` 注入到当前组件的编译选项中。
 
@@ -140,5 +201,67 @@ foreach(child ${children})
         add_subdirectory(${child})
     endif()
 endforeach()
+```
+
+---
+
+## 8. 常见问题排查 (Q&A)
+
+* **Q: 提示 `unknown type name 'HAL_StatusTypeDef'`?**
+* A: 检查组件是否 `REQUIRES` 了 `stm32cubemx`，且头文件中是否先包含了 `stm32f4xx_hal.h`。
 
 
+* **Q: 出现 `conflicting types for 'xxx'` 错误?**
+* A: 通常是因为函数调用写在了函数体外部，或者 C/C++ 混合调用时缺少 `extern "C"`。
+
+
+* **Q: 编译报错 `Undefined reference to 'xxx'`?**
+* A: 检查该函数所在的组件是否已在当前组件的 `REQUIRES` 中声明。
+
+
+* **Q: Release 模式下程序跑飞/卡死?**
+* A: 检查中断标志位或硬件寄存器相关的变量是否遗漏了 `volatile` 声明。
+
+
+
+---
+
+## 9. 典型问题与解决方案 
+
+### 9.1 Ninja 构建系统的依赖问题
+
+* **现象**：重命名文件（如 `Chassis.c` 改为 `Chassis.cpp`）并修改 `CMakeLists.txt` 后，编译报错：`ninja: error: '...Chassis.c', needed by '...', missing and no known rule to make it`。
+* **原因**：Ninja 会缓存上一次编译的依赖树。当你删除/重命名文件时，旧的构建规则仍然残留在 `build` 文件夹的缓存中。
+* **解决**：**必须彻底删除 `build` 文件夹**并重新进行 CMake Configure。仅仅点击“Clean”可能无法清除 Ninja 的目标缓存。
+
+### 9.2 HAL 库类型识别失败 (`HAL_StatusTypeDef`)
+
+* **现象**：报错 `unknown type name 'HAL_StatusTypeDef'` 或大量 HAL 库内部函数报错。
+* **原因**：
+1. **错误的包含方式**：直接包含了外设头文件（如 `#include "stm32f4xx_hal_can.h"`）。
+2. **包含顺序错乱**：在定义 HAL 类型之前引用了它们。
+
+
+* **规范建议**：
+* **永远不要**直接包含 `stm32f4xx_hal_xxx.h`。
+* **始终包含**总头文件 `#include "stm32f4xx_hal.h"`，它会处理所有的宏定义依赖、类型声明以及 `stm32f4xx_hal_conf.h` 的加载。
+
+
+
+### 9.3 C++ 调用 C 导致的链接/声明错误
+
+* **现象**：`error: 'hcan1' was not declared in this scope`。
+* **原因**：CubeMX 生成的变量（如 `hcan1`）是在 `.c` 文件中定义的。在 `.cpp` 文件中引用时，编译器默认按照 C++ 的名称修饰规则寻找，导致匹配失败。
+* **规范建议**：
+* 在 C++ 中引用 C 全局变量时，必须使用 `extern "C"`：
+```cpp
+extern "C" {
+    extern CAN_HandleTypeDef hcan1;
+}
+
+```
+* 或者更推荐的做法是：在 `main.c` 初始化时将句柄指针传递给组件，实现解耦。
+
+---
+
+**HNUYueLuRM框架待移植**

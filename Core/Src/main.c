@@ -90,7 +90,7 @@ int main(void)
   MX_GPIO_Init();
   MX_CAN1_Init();
   /* USER CODE BEGIN 2 */
-  Chassis_Init();
+  Chassis_Init(&hcan1); 
   /* USER CODE END 2 */
 
   /* Infinite loop */

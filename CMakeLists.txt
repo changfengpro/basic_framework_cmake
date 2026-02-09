@@ -41,6 +41,16 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_C_EXTENSIONS ON)
 
+# Set the C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS ON)
+
+# Configure C++ compilation options
+# -fno-exceptions: Disable exception handling (mandatory for embedded systems)
+# -fno-rtti: Disable runtime type identification
+# -fno-threadsafe-statics: Disable thread-safe static variable initialization (reduces overhead)
+set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -fno-exceptions -fno-rtti -fno-threadsafe-statics")
 
 # Define the build type
 if(NOT CMAKE_BUILD_TYPE)
@@ -48,7 +58,7 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 
 # Enable CMake support for ASM and C languages
-enable_language(C ASM)
+enable_language(C ASM CXX)
 
 # Create an executable object type
 add_executable(${CMAKE_PROJECT_NAME})
