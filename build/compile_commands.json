@@ -1,0 +1,152 @@
+[
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include -ID:/STM/basic_framework/Component/bsp/bsp_can/. -ID:/STM/basic_framework/Application/Chassis/.  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles\\basic_framework.dir\\Core\\Src\\main.c.obj -c D:\\STM\\basic_framework\\Core\\Src\\main.c",
+  "file": "D:/STM/basic_framework/Core/Src/main.c",
+  "output": "D:/STM/basic_framework/build/CMakeFiles/basic_framework.dir/Core/Src/main.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include -ID:/STM/basic_framework/Component/bsp/bsp_can/. -ID:/STM/basic_framework/Application/Chassis/.  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles\\basic_framework.dir\\Core\\Src\\gpio.c.obj -c D:\\STM\\basic_framework\\Core\\Src\\gpio.c",
+  "file": "D:/STM/basic_framework/Core/Src/gpio.c",
+  "output": "D:/STM/basic_framework/build/CMakeFiles/basic_framework.dir/Core/Src/gpio.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include -ID:/STM/basic_framework/Component/bsp/bsp_can/. -ID:/STM/basic_framework/Application/Chassis/.  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles\\basic_framework.dir\\Core\\Src\\can.c.obj -c D:\\STM\\basic_framework\\Core\\Src\\can.c",
+  "file": "D:/STM/basic_framework/Core/Src/can.c",
+  "output": "D:/STM/basic_framework/build/CMakeFiles/basic_framework.dir/Core/Src/can.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include -ID:/STM/basic_framework/Component/bsp/bsp_can/. -ID:/STM/basic_framework/Application/Chassis/.  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles\\basic_framework.dir\\Core\\Src\\stm32f4xx_it.c.obj -c D:\\STM\\basic_framework\\Core\\Src\\stm32f4xx_it.c",
+  "file": "D:/STM/basic_framework/Core/Src/stm32f4xx_it.c",
+  "output": "D:/STM/basic_framework/build/CMakeFiles/basic_framework.dir/Core/Src/stm32f4xx_it.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include -ID:/STM/basic_framework/Component/bsp/bsp_can/. -ID:/STM/basic_framework/Application/Chassis/.  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles\\basic_framework.dir\\Core\\Src\\stm32f4xx_hal_msp.c.obj -c D:\\STM\\basic_framework\\Core\\Src\\stm32f4xx_hal_msp.c",
+  "file": "D:/STM/basic_framework/Core/Src/stm32f4xx_hal_msp.c",
+  "output": "D:/STM/basic_framework/build/CMakeFiles/basic_framework.dir/Core/Src/stm32f4xx_hal_msp.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include -ID:/STM/basic_framework/Component/bsp/bsp_can/. -ID:/STM/basic_framework/Application/Chassis/.  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles\\basic_framework.dir\\Core\\Src\\sysmem.c.obj -c D:\\STM\\basic_framework\\Core\\Src\\sysmem.c",
+  "file": "D:/STM/basic_framework/Core/Src/sysmem.c",
+  "output": "D:/STM/basic_framework/build/CMakeFiles/basic_framework.dir/Core/Src/sysmem.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include -ID:/STM/basic_framework/Component/bsp/bsp_can/. -ID:/STM/basic_framework/Application/Chassis/.  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles\\basic_framework.dir\\Core\\Src\\syscalls.c.obj -c D:\\STM\\basic_framework\\Core\\Src\\syscalls.c",
+  "file": "D:/STM/basic_framework/Core/Src/syscalls.c",
+  "output": "D:/STM/basic_framework/build/CMakeFiles/basic_framework.dir/Core/Src/syscalls.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include -ID:/STM/basic_framework/Component/bsp/bsp_can/. -ID:/STM/basic_framework/Application/Chassis/.  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -x assembler-with-cpp -MMD -MP -g -o CMakeFiles\\basic_framework.dir\\startup_stm32f407xx.s.obj -c D:\\STM\\basic_framework\\startup_stm32f407xx.s",
+  "file": "D:/STM/basic_framework/startup_stm32f407xx.s",
+  "output": "D:/STM/basic_framework/build/CMakeFiles/basic_framework.dir/startup_stm32f407xx.s.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/Component/bsp/bsp_can/. -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -o Component\\bsp\\bsp_can\\CMakeFiles\\bsp_can.dir\\bsp_can.c.obj -c D:\\STM\\basic_framework\\Component\\bsp\\bsp_can\\bsp_can.c",
+  "file": "D:/STM/basic_framework/Component/bsp/bsp_can/bsp_can.c",
+  "output": "D:/STM/basic_framework/build/Component/bsp/bsp_can/CMakeFiles/bsp_can.dir/bsp_can.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/Application/Chassis/. -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include -ID:/STM/basic_framework/Component/bsp/bsp_can/.  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -o Application\\Chassis\\CMakeFiles\\Chassis.dir\\Chassis.c.obj -c D:\\STM\\basic_framework\\Application\\Chassis\\Chassis.c",
+  "file": "D:/STM/basic_framework/Application/Chassis/Chassis.c",
+  "output": "D:/STM/basic_framework/build/Application/Chassis/CMakeFiles/Chassis.dir/Chassis.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o cmake\\stm32cubemx\\CMakeFiles\\STM32_Drivers.dir\\__\\__\\Core\\Src\\system_stm32f4xx.c.obj -c D:\\STM\\basic_framework\\Core\\Src\\system_stm32f4xx.c",
+  "file": "D:/STM/basic_framework/Core/Src/system_stm32f4xx.c",
+  "output": "D:/STM/basic_framework/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o cmake\\stm32cubemx\\CMakeFiles\\STM32_Drivers.dir\\__\\__\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_can.c.obj -c D:\\STM\\basic_framework\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_can.c",
+  "file": "D:/STM/basic_framework/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c",
+  "output": "D:/STM/basic_framework/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o cmake\\stm32cubemx\\CMakeFiles\\STM32_Drivers.dir\\__\\__\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_rcc.c.obj -c D:\\STM\\basic_framework\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_rcc.c",
+  "file": "D:/STM/basic_framework/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+  "output": "D:/STM/basic_framework/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o cmake\\stm32cubemx\\CMakeFiles\\STM32_Drivers.dir\\__\\__\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_rcc_ex.c.obj -c D:\\STM\\basic_framework\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_rcc_ex.c",
+  "file": "D:/STM/basic_framework/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+  "output": "D:/STM/basic_framework/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o cmake\\stm32cubemx\\CMakeFiles\\STM32_Drivers.dir\\__\\__\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_flash.c.obj -c D:\\STM\\basic_framework\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_flash.c",
+  "file": "D:/STM/basic_framework/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+  "output": "D:/STM/basic_framework/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o cmake\\stm32cubemx\\CMakeFiles\\STM32_Drivers.dir\\__\\__\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_flash_ex.c.obj -c D:\\STM\\basic_framework\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_flash_ex.c",
+  "file": "D:/STM/basic_framework/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+  "output": "D:/STM/basic_framework/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o cmake\\stm32cubemx\\CMakeFiles\\STM32_Drivers.dir\\__\\__\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_flash_ramfunc.c.obj -c D:\\STM\\basic_framework\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_flash_ramfunc.c",
+  "file": "D:/STM/basic_framework/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+  "output": "D:/STM/basic_framework/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o cmake\\stm32cubemx\\CMakeFiles\\STM32_Drivers.dir\\__\\__\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_gpio.c.obj -c D:\\STM\\basic_framework\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_gpio.c",
+  "file": "D:/STM/basic_framework/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+  "output": "D:/STM/basic_framework/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o cmake\\stm32cubemx\\CMakeFiles\\STM32_Drivers.dir\\__\\__\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_dma_ex.c.obj -c D:\\STM\\basic_framework\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_dma_ex.c",
+  "file": "D:/STM/basic_framework/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+  "output": "D:/STM/basic_framework/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o cmake\\stm32cubemx\\CMakeFiles\\STM32_Drivers.dir\\__\\__\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_dma.c.obj -c D:\\STM\\basic_framework\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_dma.c",
+  "file": "D:/STM/basic_framework/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+  "output": "D:/STM/basic_framework/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o cmake\\stm32cubemx\\CMakeFiles\\STM32_Drivers.dir\\__\\__\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_pwr.c.obj -c D:\\STM\\basic_framework\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_pwr.c",
+  "file": "D:/STM/basic_framework/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+  "output": "D:/STM/basic_framework/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o cmake\\stm32cubemx\\CMakeFiles\\STM32_Drivers.dir\\__\\__\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_pwr_ex.c.obj -c D:\\STM\\basic_framework\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_pwr_ex.c",
+  "file": "D:/STM/basic_framework/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+  "output": "D:/STM/basic_framework/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o cmake\\stm32cubemx\\CMakeFiles\\STM32_Drivers.dir\\__\\__\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_cortex.c.obj -c D:\\STM\\basic_framework\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_cortex.c",
+  "file": "D:/STM/basic_framework/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+  "output": "D:/STM/basic_framework/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o cmake\\stm32cubemx\\CMakeFiles\\STM32_Drivers.dir\\__\\__\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal.c.obj -c D:\\STM\\basic_framework\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal.c",
+  "file": "D:/STM/basic_framework/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+  "output": "D:/STM/basic_framework/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj"
+},
+{
+  "directory": "D:/STM/basic_framework/build",
+  "command": "D:\\PROGRA~2\\DEVELO~1\\Arm\\GNUTOO~1\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -ID:/STM/basic_framework/cmake/stm32cubemx/../../Core/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/STM/basic_framework/cmake/stm32cubemx/../../Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o cmake\\stm32cubemx\\CMakeFiles\\STM32_Drivers.dir\\__\\__\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_exti.c.obj -c D:\\STM\\basic_framework\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_exti.c",
+  "file": "D:/STM/basic_framework/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+  "output": "D:/STM/basic_framework/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj"
+}
+]
