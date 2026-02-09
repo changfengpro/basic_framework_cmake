@@ -3,9 +3,11 @@
 
 #include "stm32f4xx_hal.h"
 
+#ifdef __cplusplus
 /* C++ USER CODE BEGIN  */
 
 /* C++ USER CODE END   */
+#endif // __cplusplu
 
 #ifdef __cplusplus
 extern "C" {
