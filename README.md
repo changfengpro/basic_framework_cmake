@@ -88,15 +88,17 @@ register_component(
 
 * `register_component`通用模板:
 ```
+file(GLOB SOURCES "*.c" "*.cpp")
 register_component(
     SRCS 
-        "xxx.c"
+        ${SOURCES}
     INCLUDE_DIRS 
         "."                 # "."代表当前文件夹包含头文件
     REQUIRES 
         "stm32cubemx" # 依赖 HAL 库定义
         
 )
+
 ```
 
 ### 5.2 常用编译命令
@@ -151,7 +153,7 @@ extern "C" {
 
 ```
 
-* 例如`djimotor.h
+* 例如`djimotor.h`
 ```bsp_can.h
 #ifndef __DJIMOTOR_H
 #define __DJIMOTOR_H
