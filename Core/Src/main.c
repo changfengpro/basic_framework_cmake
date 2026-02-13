@@ -32,12 +32,19 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+/* 定义按键状态 */
+typedef enum {
+  KEY_IDLE,
+  KEY_WAIT_RELEASE_1,
+  KEY_WAIT_PRESS_2,
+  KEY_RELEASE_WAIT,  
+  KEY_SEND_RELEASE   
+} key_state_t;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define DOUBLE_CLICK_TIME_MS 300
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -54,7 +61,7 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-void cdc_task(void);
+void keyboard_task(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -105,22 +112,7 @@ int main(void)
     // HAL_Delay(1000);
     // HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_13);
     tud_task();
-
-    static uint32_t start_ms = 0;
-    if (HAL_GetTick() - start_ms > 1000) {
-        start_ms = HAL_GetTick();
-        
-        // 检查 CDC 接口是否已连接（DTR 信号已建立）
-        if (tud_cdc_connected()) {
-            tud_cdc_write_str("Hello World from STM32!\r\n");
-            tud_cdc_write_flush(); // 强制刷新缓冲区发送
-        }
-    }
-
-    // 4. 调用接收处理函数
-    cdc_task();
-  
-
+    keyboard_task();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -174,20 +166,73 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-void cdc_task(void)
-{
-  // 检查是否有数据可读
-  if ( tud_cdc_available() )
-  {
-    uint8_t buf[64];
-    // 读取接收到的数据
-    uint32_t count = tud_cdc_read(buf, sizeof(buf));
+void keyboard_task(void) {
+    static key_state_t state = KEY_IDLE;
+    static uint32_t last_time = 0;
+    static uint32_t press_timer = 0; 
+    
+    bool is_pressed = (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == GPIO_PIN_SET);
+    uint32_t current_time = HAL_GetTick();
 
-    // 原样发回 (Echo)
-    tud_cdc_write("Received: ", 10);
-    tud_cdc_write(buf, count);
-    tud_cdc_write_flush();
-  }
+    // 1. 软件防抖 (20ms)
+    if (current_time - last_time < 20) return;
+    
+    // 2. 检查 USB 是否就绪
+    if (!tud_hid_ready()) return;
+
+    switch (state) {
+        case KEY_IDLE:
+            if (is_pressed) {
+                state = KEY_WAIT_RELEASE_1;
+                last_time = current_time;
+            }
+            break;
+
+        case KEY_WAIT_RELEASE_1:
+            if (!is_pressed) {
+                // 第一次松开，开始计时 300ms 窗口
+                press_timer = current_time;
+                state = KEY_WAIT_PRESS_2;
+                last_time = current_time;
+            }
+            break;
+
+        case KEY_WAIT_PRESS_2:
+            if (is_pressed) {
+                // 【判定为双击】：发送 Ctrl + V
+                uint8_t keycodes[6] = { HID_KEY_V, 0, 0, 0, 0, 0 };
+                tud_hid_keyboard_report(0, KEYBOARD_MODIFIER_LEFTCTRL, keycodes);
+                
+                state = KEY_RELEASE_WAIT; // 跳转到统一的释放等待状态
+                last_time = current_time;
+            } 
+            else if (current_time - press_timer > DOUBLE_CLICK_TIME_MS) {
+                // 【判定为单击】：发送 Ctrl + C
+                uint8_t keycodes[6] = { HID_KEY_C, 0, 0, 0, 0, 0 };
+                tud_hid_keyboard_report(0, KEYBOARD_MODIFIER_LEFTCTRL, keycodes);
+                
+                // 单击因为此时手已经松开了，直接发送释放报告
+                state = KEY_SEND_RELEASE; 
+                last_time = current_time;
+            }
+            break;
+
+        case KEY_RELEASE_WAIT:
+            // 处理双击后的手指抬起
+            if (!is_pressed) {
+                tud_hid_keyboard_report(0, 0, NULL);
+                state = KEY_IDLE;
+                last_time = current_time;
+            }
+            break;
+
+        case KEY_SEND_RELEASE:
+            // 处理单击后的自动释放
+            tud_hid_keyboard_report(0, 0, NULL);
+            state = KEY_IDLE;
+            last_time = current_time;
+            break;
+    }
 }
 /* USER CODE END 4 */
 
