@@ -20,14 +20,14 @@
 #include "main.h"
 #include "can.h"
 #include "usart.h"
-#include "usb_device.h"
+#include "usb_otg.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "bsp_can.h"
 #include "chassis.h"
-#include "usbd_cdc_if.h"
+#include "tusb.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -54,7 +54,7 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-
+void cdc_task(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -93,17 +93,34 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   MX_CAN1_Init();
-  MX_USB_DEVICE_Init();
+  MX_USB_OTG_FS_PCD_Init();
   /* USER CODE BEGIN 2 */
-  
+  tusb_init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    CDC_Transmit_FS((uint8_t*)"Hello World!\r\n", 14);
-    HAL_Delay(1000);
+    // HAL_Delay(1000);
+    // HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_13);
+    tud_task();
+
+    static uint32_t start_ms = 0;
+    if (HAL_GetTick() - start_ms > 1000) {
+        start_ms = HAL_GetTick();
+        
+        // 检查 CDC 接口是否已连接（DTR 信号已建立）
+        if (tud_cdc_connected()) {
+            tud_cdc_write_str("Hello World from STM32!\r\n");
+            tud_cdc_write_flush(); // 强制刷新缓冲区发送
+        }
+    }
+
+    // 4. 调用接收处理函数
+    cdc_task();
+  
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -157,14 +174,21 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
-int fputc(int ch, FILE *f)
+void cdc_task(void)
 {
-  HAL_UART_Transmit(&huart1,(uint8_t*)&ch,1,1000);
-  return ch;
+  // 检查是否有数据可读
+  if ( tud_cdc_available() )
+  {
+    uint8_t buf[64];
+    // 读取接收到的数据
+    uint32_t count = tud_cdc_read(buf, sizeof(buf));
+
+    // 原样发回 (Echo)
+    tud_cdc_write("Received: ", 10);
+    tud_cdc_write(buf, count);
+    tud_cdc_write_flush();
+  }
 }
-
-
 /* USER CODE END 4 */
 
 /**
