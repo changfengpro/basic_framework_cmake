@@ -21,7 +21,7 @@ project(${CMAKE_PROJECT_NAME})
 message("Build type: " ${CMAKE_BUILD_TYPE})
 
 # Define component search path
-set(COMPONENT_DIRS "Component" "Core" "Drivers" "Application")
+set(COMPONENT_DIRS "Core" "Drivers" "Component" "Application")
 
 foreach(dir ${COMPONENT_DIRS})
     get_filename_component(abs_dir ${dir} ABSOLUTE)

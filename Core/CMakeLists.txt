@@ -7,5 +7,5 @@ register_component(
         "Inc"            # 指向头文件所在目录
     REQUIRES 
         "stm32cubemx"
-        "tinyusb"
+        "robot_Init"
 )

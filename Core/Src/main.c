@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "cmsis_os.h"
 #include "can.h"
 #include "usart.h"
 #include "usb_otg.h"
@@ -27,7 +28,7 @@
 /* USER CODE BEGIN Includes */
 #include "bsp_can.h"
 #include "chassis.h"
-#include "tusb.h"
+#include "robot_init.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -53,8 +54,9 @@
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+void MX_FREERTOS_Init(void);
 /* USER CODE BEGIN PFP */
-void cdc_task(void);
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -95,32 +97,19 @@ int main(void)
   MX_CAN1_Init();
   MX_USB_OTG_FS_PCD_Init();
   /* USER CODE BEGIN 2 */
-  tusb_init();
+  RobotInit();
+  HAL_NVIC_SetPriorityGrouping(NVIC_PRIORITYGROUP_4);
   /* USER CODE END 2 */
 
+  /* Call init function for freertos objects (in cmsis_os2.c) */
+  MX_FREERTOS_Init();
+  /* Start scheduler */
+  osKernelStart();
+  /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    // HAL_Delay(1000);
-    // HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_13);
-    tud_task();
-
-    static uint32_t start_ms = 0;
-    if (HAL_GetTick() - start_ms > 1000) {
-        start_ms = HAL_GetTick();
-        
-        // 检查 CDC 接口是否已连接（DTR 信号已建立）
-        if (tud_cdc_connected()) {
-            tud_cdc_write_str("Hello World from STM32!\r\n");
-            tud_cdc_write_flush(); // 强制刷新缓冲区发送
-        }
-    }
-
-    // 4. 调用接收处理函数
-    cdc_task();
-  
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -174,22 +163,30 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-void cdc_task(void)
-{
-  // 检查是否有数据可读
-  if ( tud_cdc_available() )
-  {
-    uint8_t buf[64];
-    // 读取接收到的数据
-    uint32_t count = tud_cdc_read(buf, sizeof(buf));
 
-    // 原样发回 (Echo)
-    tud_cdc_write("Received: ", 10);
-    tud_cdc_write(buf, count);
-    tud_cdc_write_flush();
-  }
-}
 /* USER CODE END 4 */
+
+/**
+  * @brief  Period elapsed callback in non blocking mode
+  * @note   This function is called  when TIM14 interrupt took place, inside
+  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+  * a global variable "uwTick" used as application time base.
+  * @param  htim : TIM handle
+  * @retval None
+  */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  /* USER CODE BEGIN Callback 0 */
+
+  /* USER CODE END Callback 0 */
+  if (htim->Instance == TIM14)
+  {
+    HAL_IncTick();
+  }
+  /* USER CODE BEGIN Callback 1 */
+
+  /* USER CODE END Callback 1 */
+}
 
 /**
   * @brief  This function is executed in case of error occurrence.

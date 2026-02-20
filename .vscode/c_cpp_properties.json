@@ -6,7 +6,10 @@
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc",
                 "${workspaceFolder}/Core/Inc",
-                "${workspaceFolder}/Component/bsp/bsp_can"
+                "${workspaceFolder}/Component/bsp/bsp_can",
+                "${workspaceFolder}/Component/bsp/tinyusb",
+                "${workspaceFolder}/Application/Robot_Task",
+                "${workspaceFolder}/Component/bsp/tinyusb"
             ],
             "defines": [
                 "_DEBUG",
