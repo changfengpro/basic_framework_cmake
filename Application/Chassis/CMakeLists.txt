@@ -1,6 +1,6 @@
 register_component(
     SRCS 
-        "Chassis.cpp"
+        "chassis.cpp"
     INCLUDE_DIRS 
         "."  
     REQUIRES 

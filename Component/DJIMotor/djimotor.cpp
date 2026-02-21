@@ -1,4 +1,4 @@
-#include "DJIMotor.h"
+#include "djimotor.h"
 
 // 构造函数实现
 void DJIMotor::DJIMotor_Init(CAN_HandleTypeDef* hcan, uint32_t can_id) 
